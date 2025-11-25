@@ -34,8 +34,8 @@
   <title>TempoMaster</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <!-- <link rel="apple-touch-icon" href="static/images/favicon.ico"> -->
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -66,74 +66,7 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
   
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
   
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -158,13 +91,13 @@
                 <span class="author-block">
                   <a target="_blank">Cong Liu<sup>2</sup></a>,</span>
                   <span class="author-block">
-                    <a target="_blank">Junke Wang<sup>1</sup></a>,</span>
+                    <a href="https://wdrink.github.io/" target="_blank">Junke Wang<sup>1</sup></a>,</span>
                     <span class="author-block">
                       <a target="_blank">Junqi Liu<sup>2</sup></a>,</span>
                       <span class="author-block">
-                        <a target="_blank">Haibin Huang<sup>2</sup></a>,</span>
+                        <a href="https://brotherhuang.github.io/" target="_blank">Haibin Huang<sup>2</sup></a>,</span>
                         <span class="author-block">
-                          <a target="_blank">Zuxuan Wu<sup>1</sup></a>,</span>
+                          <a href="https://zxwu.azurewebsites.net/" target="_blank">Zuxuan Wu<sup>1</sup></a>,</span>
                           <span class="author-block">
                             <a target="_blank">Chi Zhang<sup>2</sup></a>,</span>
                             <span class="author-block">
@@ -224,10 +157,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
+      <img src="static/images/teaser.jpg"/>
       <!-- TODO: Replace with your video description -->
       <span class="caption">
         TempoMaster first generates a video sequence at coarse and low frame rate to establish the global dynamics and semantic
@@ -257,75 +187,69 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <h2 class="title is-3">Image-to-Video (24fps, 121 frames)</h2>
+
+      <div class="video-grid">
+        <div class="video-cell">
+          <video controls preload="metadata">
+            <source src="static/videos/carousel1.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Caption 1</p>
+        </div>
+
+        <div class="video-cell">
+          <video controls preload="metadata">
+            <source src="static/videos/carousel2.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Caption 2</p>
+        </div>
+
+        <div class="video-cell">
+          <video controls preload="metadata">
+            <source src="static/videos/carousel3.mp4" type="video/mp4">
+          </video>
+          <p class="video-caption">Caption 3</p>
+        </div>
+
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+      <h2 class="title is-3">Image-to-Video (24fps, 500 frames)</h2>
+
+      <div class="video-grid">
+        <div class="video-cell">
+          <video controls preload="metadata">
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
+          <p class="video-caption">Caption 1</p>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+
+        <div class="video-cell">
+          <video controls preload="metadata">
             <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
+          <p class="video-caption">Caption 2</p>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+
+        <div class="video-cell">
+          <video controls preload="metadata">
             <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
+          <p class="video-caption">Caption 3</p>
         </div>
+
       </div>
+
     </div>
   </div>
 </section>

@@ -100,11 +100,11 @@ body {
 }
 
 .hero-body {
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .teaser .hero-body {
-  padding-top: 2rem;
+  padding-top: 0rem;
   padding-bottom: 4rem;
 }
 
@@ -321,17 +321,6 @@ body {
   padding-bottom: 1rem;
 }
 
-.title.is-3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--gradient-accent);
-  border-radius: 2px;
-}
 
 
 .caption {
@@ -759,3 +748,40 @@ a:focus {
   }
 }
 
+/* 视频网格：默认 2 列，手机 1 列 */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 列 */
+  gap: 0.5rem;                             /* 间距 */
+  margin-top: 0.5rem;
+}
+
+/* 每个视频块 */
+.video-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 视频本身：统一宽度，自适应 */
+.video-cell video {
+  width: 100%;
+  max-width: 832px;   /* 单只最大宽度，可改 */
+  height: auto;
+  border-radius: 4px;
+}
+
+/*  caption 样式 */
+.video-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+/* 手机端 1 列 */
+@media screen and (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -333,11 +333,18 @@ body {
   border-radius: 2px;
 }
 
+
+.caption {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-secondary);
+}
+
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .content.has-text-justified p {
@@ -751,6 +758,4 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
-
 

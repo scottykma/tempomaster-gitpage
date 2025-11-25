@@ -192,17 +192,20 @@ body {
     transition: var(--transition);
 }
 
-.publication-authors a:hover::after {
+
+.author-block a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+.author-block a[href]:not([href=""]):not([href="#"]) {
+    color: #3273dc !important;   /* Bulma 蓝 */
+    text-decoration: none !important;
+}
+
+
+.publication-authors a[href]:not([href=""]):not([href="#"]):hover::after {
     width: 100%;
-}
-
-.publication-authors a:hover {
-    color: var(--primary-hover) !important;
-}
-
-.author-block {
-  display: inline-block;
-  margin-right: 0.5rem;
 }
 
 .publication-banner img {
@@ -332,8 +335,8 @@ body {
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--text-secondary);
 }
 

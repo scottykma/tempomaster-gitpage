@@ -189,15 +189,33 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
 
 <section class="hero is-small">
   <div class="container">
-      <div class="column">
+      <div class="column_method">
         <h2 class="title is-3">Next-Frame-Rate Prediction</h2>
-        <div class="columns is-centered">
-          <img src="static/images/generation_manners.jpg", width="80%"/>
+        
+        <div class="image-container">
+          <img src="static/images/generation_manners.jpg" width="100%"/>
         </div>
-        <div class="content has-text-justified">
-          Let's consider a frame sequence including T frames. <br>
-          A typical bidirectional model encode and denoise all frames together, which results in a complexity of O(T<sup>2</sup>).
+
+        <div class="method">
+          Let's consider a frame sequence including T frames. <br> <br>
+          A typical bidirectional model encode and denoise all frames together. <br>
+          It delivers a <b>high temporal consistency</b> in the cost of computational efficiency. <br> <br>
+          Autoregressive models predict each frame independently. <br>
+          It's <b>efficient</b> but suffer from error accumulation and lack of long-range temporal coherence. <br> <br>
+          TempoMaster decouples global content planning from local detail refinement. <br>
+          In this way, we can plan the <b>consistent</b> temporal structureat with a coarse (low-frame-rate) frame sequences. <br>
+          And the fine-grained details can be refined by predicting frames at higher rates in parallel <b>efficiently</b>. 
         </div>
+
+      <div class="image-container">
+        <img src="static/images/inference_process.jpg" width="50%"/>
+      </div>
+
+      <div class="caption">
+        The generated low-fps frames can be partitioned into multiple segments to enable parallel generation.
+      </div>
+
+
       </div>
   </div>
 </section>
@@ -205,6 +223,7 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <div class="column_method">
       <h2 class="title is-3">Image-to-Video (24fps, 121 frames)</h2>
 
       <div class="video-grid">
@@ -230,7 +249,7 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
         </div>
 
       </div>
-
+      </div>
     </div>
   </div>
 </section>
@@ -239,7 +258,8 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Image-to-Video (24fps, 500 frames)</h2>
+      <div class="column_method">
+      <h2 class="title is-3">Image-to-Video (24fps, 121 frames)</h2>
 
       <div class="video-grid">
         <div class="video-cell">
@@ -264,10 +284,11 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
         </div>
 
       </div>
-
+      </div>
     </div>
   </div>
 </section>
+
 <!-- End video carousel -->
 
 
@@ -281,7 +302,7 @@ Extensive experiments demonstrate that TempoMaster establishes a new state-of-th
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{
+      <pre id="bibtex-code"><code>@misc{tempomaster2025,
       title={TempoMaster: Efficient Long Video Generation via Next-Frame-Rate Prediction}, 
       author={Yukuo Ma and Cong Liu and Junke Wang and Junqi Liu and Haibin Huang and Zuxuan Wu and Chi Zhang and Xuelong Li},
       year={2025},

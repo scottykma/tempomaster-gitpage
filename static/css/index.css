@@ -326,14 +326,23 @@ body {
 
 .caption {
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.2;
   color: var(--text-secondary);
+  margin: auto;
+}
+
+.method {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.8rem;
   color: var(--text-primary);
   margin-top: 2rem;
 }
@@ -777,6 +786,29 @@ a:focus {
   color: #4b5563;
   text-align: center;
 }
+
+.column_method {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* 确保容器不会限制内容高度 */
+  min-height: auto;
+  height: auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+
+
+
 
 @media screen and (max-width: 768px) {
   .video-grid {
